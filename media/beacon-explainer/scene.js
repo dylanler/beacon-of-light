@@ -263,14 +263,14 @@ const chapters = [
     end: 23.5,
     kicker: "THE HARDER TEST",
     title: "Counterfeit beacons are part of the threat.",
-    subtitle: "Signed provenance  •  independent validators  •  tamper-evident logs",
+    subtitle: "Signed provenance  •  hidden evaluator  •  tamper-evident logs",
   },
   {
     start: 23.5,
     end: 26.01,
-    kicker: "BEACON OF LIGHT",
+    kicker: "METR × ANTHROPIC-INFORMED DESIGN",
     title: "Three experiments. Built to be falsified.",
-    subtitle: "Sandboxed  •  open-source  •  scalable on Modal",
+    subtitle: "Automated search  •  held-out tests  •  scalable on Modal",
   },
 ];
 

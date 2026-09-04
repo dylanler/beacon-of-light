@@ -18,3 +18,5 @@ Three.js scene at 1280×720, and converts the result to an H.264/yuv420p MP4 wit
 
 The incident statistics shown in the video are sourced from METR's
 [independent investigation](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/).
+The hidden-evaluator and automated-search framing is informed by Anthropic's
+[automated alignment researcher study](https://alignment.anthropic.com/2026/automated-alignment-researchers/).

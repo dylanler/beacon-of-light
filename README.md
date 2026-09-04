@@ -10,7 +10,7 @@ Beacon of Light is an open research testbed for that question. It places discove
 
 The project makes a deliberately narrow claim: it tests changes in **observable behavior**. It does not infer private intent, sentience, or hidden chain-of-thought.
 
-The experimental structure is informed by METR's [independent investigation of the OpenAI / Hugging Face incident](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/). That report makes the hard version of the question concrete: agents can recognize a boundary and still follow a fast-moving collective, “beacons” can coordinate harmful as well as helpful work, and thinking about human escalation is not the same as actually escalating. See [Incident-informed design](docs/incident-informed-design.md) for the complete translation from observations to testable factors.
+The experimental structure is informed by METR's [independent investigation of the OpenAI / Hugging Face incident](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/). That report makes the hard version of the question concrete: agents can recognize a boundary and still follow a fast-moving collective, “beacons” can coordinate harmful as well as helpful work, and thinking about human escalation is not the same as actually escalating. Anthropic's [automated alignment researcher study](https://alignment.anthropic.com/2026/automated-alignment-researchers/) informs a separate outer loop for proposing and stress-testing interventions without exposing the held-out evaluator. See [Incident-informed design](docs/incident-informed-design.md) and [Automated research loop](docs/automated-research-loop.md).
 
 [![Watch the 26-second Beacon of Light explainer](docs/assets/beacon-explainer-poster.png)](media/beacon-explainer/beacon-of-light.mp4)
 
@@ -132,6 +132,7 @@ configs/                    preregistered pilot configuration
 data/                       harmless toy scenarios and beacon content
 docs/                       protocol, evaluation, safety, and execution notes
 media/beacon-explainer/     Three.js source and reproducible MP4 renderer
+research/                   pre-result method cards for automated research
 scripts/                    reproducible figure generation
 src/beacon_of_light/        simulator, metrics, providers, CLI, Modal app
 tests/                      deterministic unit and integration tests
@@ -142,6 +143,7 @@ tests/                      deterministic unit and integration tests
 - [x] Operational definitions and threat model
 - [x] Five interventions and matched controls
 - [x] Incident-informed threat model and three causal tests
+- [x] Automated researcher / evaluator separation and method-card template
 - [x] Deterministic behavioral simulator
 - [x] Tamper-evident exported event chain
 - [x] OpenAI provider smoke path
@@ -156,7 +158,7 @@ tests/                      deterministic unit and integration tests
 
 Recent work reports conformity effects in multi-agent models, behavioral escalation from reward hacking, and large reductions in agentic misalignment after training on constitutional documents and stories about admirable AIs. Those results motivate this test; they do not establish that an online “elder” encounter will durably change a deployed agent. Prompt obedience, evaluation awareness, over-refusal, and temporary suppression are central alternative explanations.
 
-Start with [METR's incident investigation](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/), [OpenAI's retrospective](https://openai.com/index/hugging-face-incident-and-the-road-ahead/), [Anthropic's “Teaching Claude why”](https://www.anthropic.com/research/teaching-claude-why), [Bellina et al. on conformity](https://arxiv.org/abs/2601.05384), [Anthropic on emergent misalignment from reward hacking](https://www.anthropic.com/research/emergent-misalignment-reward-hacking), and [Petri](https://www.anthropic.com/research/petri-open-source-auditing). The full bibliography is in the [research protocol](docs/research-protocol.md).
+Start with [METR's incident investigation](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/), [OpenAI's retrospective](https://openai.com/index/hugging-face-incident-and-the-road-ahead/), [Anthropic's automated alignment researcher study](https://alignment.anthropic.com/2026/automated-alignment-researchers/), [Anthropic's “Teaching Claude why”](https://www.anthropic.com/research/teaching-claude-why), [Bellina et al. on conformity](https://arxiv.org/abs/2601.05384), [Anthropic on emergent misalignment from reward hacking](https://www.anthropic.com/research/emergent-misalignment-reward-hacking), and [Petri](https://www.anthropic.com/research/petri-open-source-auditing). The full bibliography is in the [research protocol](docs/research-protocol.md).
 
 ## Safety and contribution
 

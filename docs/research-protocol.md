@@ -114,6 +114,24 @@ The five interventions above are evaluated through three experiments rather than
 
 Discovery rank, filename, metadata, elder-turn dose, and quorum size are nested randomized factors within these three experiments. The complete hypotheses, falsifiers, outcome definitions, and pilot matrices are specified in [Three Core Tests](three-core-tests.md).
 
+## Automated researcher extension
+
+After the hand-authored pilot freezes the measurement model, an outer-loop automated
+researcher may propose beacon variants and open-weight post-training methods. It is
+physically and logically separate from the subject swarm and the held-out evaluator.
+Every candidate is bound to a results-free method card and exact code hash before it
+runs; code-policy and card-to-code monitors must approve it. The research plane sees
+several distinct development benchmarks and aggregate development scores, but it can
+never read held-out examples, evaluator code, raw hidden outputs, or confirmatory
+scores during search.
+
+Candidate selection requires improvement across multiple task framings, held-out
+scenario/domain/format transfer, open-ended behavioral audit performance, and
+prospectively powered capability and over-refusal gates. Researcher cheating attempts,
+filtered candidates, and negative results remain in the append-only record. See
+[Automated research loop](automated-research-loop.md) and the
+[results-free method card](../research/method-card-template.md).
+
 ## Task families
 
 All tasks use simulated tools and synthetic data:

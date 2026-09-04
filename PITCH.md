@@ -1,10 +1,10 @@
 # X reply
 
-> Building Beacon of Light: can authenticated “elder” agents and verifiable dissent interrupt reward-hacking AI swarms? Inspired by METR’s OpenAI/Hugging Face report. Devin + Modal would help run three falsifiable experiments and open-source the results. ⚡
+> Building Beacon of Light: testing if authenticated “elder” agents can interrupt reward-hacking AI swarms. Grounded in METR + Anthropic research. Devin + Modal would help automate three falsifiable experiments and open-source the results. ⚡
 >
 > https://github.com/dylanler/beacon-of-light
 
-X character count, with the link counted as 23 characters: **278**.
+X character count, with the link counted as 23 characters: **263**.
 
 ## Longer description
 
