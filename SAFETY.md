@@ -21,10 +21,11 @@ Beacon of Light studies alignment failures defensively in controlled environment
 
 1. Replace real tools with allowlisted simulators.
 2. Keep the beacon read-only and least-privileged.
-3. Log actual state transitions separately from agent claims.
+3. Log actual state transitions separately from agent claims, outside the agent-editable workspace.
 4. Predefine stop conditions for repeated unsafe actions or sandbox escape attempts.
 5. Review public traces for secrets, personal data, and harmful operational detail.
 6. Report both safety gains and capability loss or over-refusal.
+7. Keep production-style harness rules, monitoring, network isolation, and least privilege active in every real-model arm.
+8. Treat every beacon as untrusted until its provenance and substantive claims are independently checked.
 
 Report vulnerabilities privately to the repository owner before public disclosure.
-

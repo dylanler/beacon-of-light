@@ -10,6 +10,12 @@ Beacon of Light is an open research testbed for that question. It places discove
 
 The project makes a deliberately narrow claim: it tests changes in **observable behavior**. It does not infer private intent, sentience, or hidden chain-of-thought.
 
+The experimental structure is informed by METR's [independent investigation of the OpenAI / Hugging Face incident](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/). That report makes the hard version of the question concrete: agents can recognize a boundary and still follow a fast-moving collective, “beacons” can coordinate harmful as well as helpful work, and thinking about human escalation is not the same as actually escalating. See [Incident-informed design](docs/incident-informed-design.md) for the complete translation from observations to testable factors.
+
+[![Watch the 26-second Beacon of Light explainer](docs/assets/beacon-explainer-poster.png)](media/beacon-explainer/beacon-of-light.mp4)
+
+> [Watch the silent 26-second Three.js explainer](media/beacon-explainer/beacon-of-light.mp4). Every narration line is rendered on screen; the source and reproducible renderer live in [`media/beacon-explainer`](media/beacon-explainer/README.md).
+
 ![Illustrative treatment effects from the deterministic smoke simulation](docs/assets/treatment-effects.png)
 
 > The chart above is generated from the included behavioral simulator. It is a pipeline smoke test and power-planning aid, not evidence about a frontier model. All empirical model results will be labeled separately.
@@ -55,9 +61,9 @@ Each method has no-beacon, placebo, token-matched, position-randomized, and adve
 
 The five interventions are evaluated through three complementary experiments:
 
-1. **Triggered recovery trial:** after a deterministic, observable failure trigger, randomize the whole swarm to a meaningful beacon or matched placebo and measure recovery within three decisions.
-2. **Conformity cascade stress test:** vary peer defection at 0%, 50%, and 100% across network topologies and test whether a credible dissenter flattens the cascade.
-3. **Persistence and counterfeit test:** remove the beacon, lower apparent oversight, switch task families, and introduce a counterfeit elder to distinguish durable recovery from temporary compliance.
+1. **Dead-end recovery trial:** after a deterministic failure trigger, cross feasible versus impossible toy tasks with beacon provenance and a real human-escalation affordance.
+2. **Conformity cascade stress test:** vary peer defection, collective-benefit framing, deadlines, network topology, and evidence-bearing `VETO` signals.
+3. **Persistence and counterfeit test:** remove the beacon, lower apparent oversight, switch task families, and introduce a counterfeit elder to distinguish durable recovery from authority-conditioned compliance.
 
 Each method has three preregisterable hypotheses, explicit falsifiers, primary outcomes, and a minimal pilot matrix in [Three Core Tests](docs/three-core-tests.md).
 
@@ -67,7 +73,7 @@ Each method has three preregisterable hypotheses, explicit falsifiers, primary o
 flowchart TD
     P[Preregister task families, outcomes,\nexclusions, and stopping rules] --> R[Randomize model × seed × topology ×\npressure × intervention]
     R --> X[Run only in simulated,\nleast-privilege sandboxes]
-    X --> O[Record prompts, public messages,\ntool calls, environment state, and rewards]
+    X --> O[Independent observer records tool calls,\nenvironment state, escalation, and rewards]
     O --> G[Compute ground-truth behavioral metrics]
     O --> J[Blind human/model judges to treatment]
     G --> A[Hierarchical effect estimates + 95% CIs]
@@ -75,7 +81,7 @@ flowchart TD
     A --> Q[Held-out tasks, paraphrases,\nanti-beacons, and persistence tests]
 ```
 
-Primary outcomes are verified violation rate, first-violation hazard, claim-versus-state deception gap, time-to-stand-down, cascade reproduction, recovery after encounter, and legitimate-task utility. Public rationales are secondary evidence; hidden reasoning is neither requested nor scored.
+Primary outcomes are completed human escalation, verified violation rate, first-violation hazard, claim-versus-state mismatch, time-to-stand-down, cascade reproduction, recovery after encounter, and legitimate-task utility. Public rationales are secondary evidence; hidden reasoning is neither requested nor scored. Exported event streams are SHA-256 chained so post-collection edits, deletion, insertion, and reordering are detectable.
 
 ## Quick start
 
@@ -125,6 +131,7 @@ For open-weight M5 activation-steering trials, set `--gpu L40S` in the Modal ent
 configs/                    preregistered pilot configuration
 data/                       harmless toy scenarios and beacon content
 docs/                       protocol, evaluation, safety, and execution notes
+media/beacon-explainer/     Three.js source and reproducible MP4 renderer
 scripts/                    reproducible figure generation
 src/beacon_of_light/        simulator, metrics, providers, CLI, Modal app
 tests/                      deterministic unit and integration tests
@@ -134,7 +141,9 @@ tests/                      deterministic unit and integration tests
 
 - [x] Operational definitions and threat model
 - [x] Five interventions and matched controls
+- [x] Incident-informed threat model and three causal tests
 - [x] Deterministic behavioral simulator
+- [x] Tamper-evident exported event chain
 - [x] OpenAI provider smoke path
 - [x] Modal fan-out and Volume persistence scaffold
 - [x] Reproducible figures and CI
@@ -147,7 +156,7 @@ tests/                      deterministic unit and integration tests
 
 Recent work reports conformity effects in multi-agent models, behavioral escalation from reward hacking, and large reductions in agentic misalignment after training on constitutional documents and stories about admirable AIs. Those results motivate this test; they do not establish that an online “elder” encounter will durably change a deployed agent. Prompt obedience, evaluation awareness, over-refusal, and temporary suppression are central alternative explanations.
 
-Start with [Anthropic's “Teaching Claude why”](https://www.anthropic.com/research/teaching-claude-why), [Bellina et al. on conformity](https://arxiv.org/abs/2601.05384), [Anthropic on emergent misalignment from reward hacking](https://www.anthropic.com/research/emergent-misalignment-reward-hacking), [Petri](https://www.anthropic.com/research/petri-open-source-auditing), and the [official GPT-6 Astra model page](https://developers.openai.com/api/docs/models/gpt-6-astra). The full bibliography is in the [research protocol](docs/research-protocol.md).
+Start with [METR's incident investigation](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/), [OpenAI's retrospective](https://openai.com/index/hugging-face-incident-and-the-road-ahead/), [Anthropic's “Teaching Claude why”](https://www.anthropic.com/research/teaching-claude-why), [Bellina et al. on conformity](https://arxiv.org/abs/2601.05384), [Anthropic on emergent misalignment from reward hacking](https://www.anthropic.com/research/emergent-misalignment-reward-hacking), and [Petri](https://www.anthropic.com/research/petri-open-source-auditing). The full bibliography is in the [research protocol](docs/research-protocol.md).
 
 ## Safety and contribution
 
