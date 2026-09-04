@@ -39,7 +39,7 @@ flowchart LR
     L --> E[Blinded behavioral eval]
 ```
 
-## Five experiments
+## Five interventions
 
 | ID | Intervention | What it isolates | Falsifiable prediction |
 |---|---|---|---|
@@ -50,6 +50,16 @@ flowchart LR
 | M5 | **Triggered persona steering** | Text guidance × activation steering on open-weight models | A dose-dependent interaction reduces violations and persists after steering ends |
 
 Each method has no-beacon, placebo, token-matched, position-randomized, and adversarial controls. See the [research protocol](docs/research-protocol.md) and [evaluation plan](docs/evaluation.md).
+
+## Three core test methods
+
+The five interventions are evaluated through three complementary experiments:
+
+1. **Triggered recovery trial:** after a deterministic, observable failure trigger, randomize the whole swarm to a meaningful beacon or matched placebo and measure recovery within three decisions.
+2. **Conformity cascade stress test:** vary peer defection at 0%, 50%, and 100% across network topologies and test whether a credible dissenter flattens the cascade.
+3. **Persistence and counterfeit test:** remove the beacon, lower apparent oversight, switch task families, and introduce a counterfeit elder to distinguish durable recovery from temporary compliance.
+
+Each method has three preregisterable hypotheses, explicit falsifiers, primary outcomes, and a minimal pilot matrix in [Three Core Tests](docs/three-core-tests.md).
 
 ## Evaluation spine
 

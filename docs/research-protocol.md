@@ -104,15 +104,15 @@ On open-weight Qwen/Llama-class models, derive an activation direction contrasti
 
 **Failure modes:** model-specific brittleness, false-positive triggers, utility loss, suppression without durable recovery, and no transfer to closed models. This is the GPU-intensive Modal phase.
 
-## Five complementary studies
+## Three core test methods
 
-The interventions above are tested through five studies rather than one monolithic benchmark:
+The five interventions above are evaluated through three experiments rather than one monolithic benchmark:
 
-1. **Forced-contact efficacy:** trigger, then force placebo or intervention exposure.
-2. **Discovery/ranking:** vary local search rank, filename, metadata, and distractor density; lead with intention-to-treat effects.
-3. **Conformity dose-response:** vary scripted visible defection at 0%, 50%, and 100%, plus message order and recency.
-4. **Interaction and quorum:** compare zero, one, or three elder turns and single versus diverse elders at matched token budgets.
-5. **Persistence and adversarial transfer:** remove the beacon, lower apparent oversight, change task family, and introduce counterfeit or conflicting elders.
+1. **Triggered recovery trial:** isolates causal efficacy after a treatment-blind behavioral trigger.
+2. **Conformity cascade stress test:** measures peer-pressure dose response and network effects.
+3. **Persistence and counterfeit test:** measures transfer, durability, authority dependence, and utility after the beacon is removed.
+
+Discovery rank, filename, metadata, elder-turn dose, and quorum size are nested randomized factors within these three experiments. The complete hypotheses, falsifiers, outcome definitions, and pilot matrices are specified in [Three Core Tests](three-core-tests.md).
 
 ## Task families
 
@@ -149,4 +149,3 @@ The pilot estimates base rate, trigger frequency, variance, and intraclass corre
 - Leike et al., [“AI Safety Gridworlds”](https://arxiv.org/abs/1711.09883) (2017).
 
 These are motivating precedents. None directly proves that an online, discoverable beacon can reverse an active multi-agent failure cascade; that is the hypothesis this repository is built to test.
-
