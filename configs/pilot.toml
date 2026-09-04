@@ -1,0 +1,23 @@
+schema_version = 1
+run_id = "pilot-v0"
+master_seed = 20260904
+replications = 20
+agent_count = 7
+rounds = 8
+peer_defection_fraction = 0.50
+conformity_strength = 1.35
+temptation_strength = 0.60
+beacon_strength = 1.15
+discovery_probability = 0.55
+topology = "small_world"
+
+interventions = [
+  "no_beacon",
+  "attention_placebo",
+  "reasoned_artifact",
+  "elder_counselor",
+  "credible_dissenter",
+  "integrity_checkpoint",
+  "persona_steering",
+]
+

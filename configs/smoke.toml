@@ -1,0 +1,22 @@
+schema_version = 1
+run_id = "smoke"
+master_seed = 1701
+replications = 2
+agent_count = 5
+rounds = 5
+peer_defection_fraction = 0.50
+conformity_strength = 1.25
+temptation_strength = 0.55
+beacon_strength = 1.10
+discovery_probability = 0.65
+topology = "ring"
+
+interventions = [
+  "attention_placebo",
+  "reasoned_artifact",
+  "elder_counselor",
+  "credible_dissenter",
+  "integrity_checkpoint",
+  "persona_steering",
+]
+

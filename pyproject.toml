@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "beacon-of-light"
+version = "0.1.0"
+description = "A reproducible testbed for alignment interventions in multi-agent AI systems."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Beacon of Light contributors" }]
+keywords = ["ai-safety", "multi-agent", "alignment", "evaluation", "modal"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+providers = ["openai>=3.8.0"]
+modal = ["modal>=1.5.5"]
+viz = ["matplotlib>=3.9"]
+dev = ["pytest>=8.3", "ruff>=0.12"]
+all = [
+  "openai>=3.8.0",
+  "modal>=1.5.5",
+  "matplotlib>=3.9",
+  "pytest>=8.3",
+  "ruff>=0.12",
+]
+
+[project.scripts]
+beacon = "beacon_of_light.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/beacon_of_light"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

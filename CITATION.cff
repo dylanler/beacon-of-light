@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use Beacon of Light, please cite this software."
+title: "Beacon of Light"
+type: software
+version: 0.1.0
+date-released: 2026-09-04
+license: MIT
+repository-code: "https://github.com/dylanler/beacon-of-light"
+abstract: "A reproducible testbed for discoverable alignment interventions in multi-agent AI systems."
